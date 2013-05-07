@@ -6,10 +6,6 @@ manipulation.
 All data is assigned to a "Wall", the "Wall" is put on a Table, which will output in
 numerical order.
 
-Example Script that prints "Hello World"...
-
-  START:w:1:s:1:"Hello ":s:1:"World":p:w:1:t:p:t:s:DONE:
-
 To run a derp script, put derplang.lua into the file where your derp script is, go into
 terminal, and type "lua derplang.lua filename.derp"
 
