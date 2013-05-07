@@ -26,29 +26,19 @@ function string:split(sep)
   self:gsub(pattern, function(c) fields[#fields+1] = c end)
   return fields
 end
-
 file = assert(io.open(arg[1]), "[DERP]: You derped loading your file.")
-
 file_txt = file:read("*all")
-
 file:close()
-
 t = file_txt:split(":")
-
-
 global_error = false
-
 local t_length = 0
 for i,v in ipairs(t) do
   t_length = i
 end
 t_length = t_length - 1
-
 tables = {}
 walls = {}
-
 while global_error == false do
-
   if t[1] ~= "START" then
     global_error = true
     print("[DERP]: START not found at beginning of script.")
@@ -56,7 +46,6 @@ while global_error == false do
     global_error = true
     print("[DERP]: DONE not found at the end of script.")
   end
-
   for i,v in ipairs(t) do
     if v == "w" then -- IF WALL IS CREATED
       walls[t[i+1]] = {}
@@ -67,13 +56,8 @@ while global_error == false do
       table.insert(tables, ft)
     end
   end
-
   global_error = true
-
 end
-
 for i,v in ipairs(tables) do
   print(v)
 end
-
-
