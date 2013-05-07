@@ -8,6 +8,7 @@ numerical order.
 
 Example Script that prints "Hello World"...
 -------------------------------------------
+
   START:w:1:s:1:"Hello ":s:1:"World":p:w:1:t:p:t:s:DONE:
 
 To run a derp script, put derplang.lua into the file where your derp script is, go into
