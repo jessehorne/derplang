@@ -62,7 +62,7 @@ while global_error == false do
     elseif v == "di" then
       di(t[i+1], t[i+2], t[i+3])
     elseif v == "fo" then
-      fo(t[i+1], t[i+2], t[i+3], t[i+4])
+      fo(t[i+1], t[i+2], t[i+3])
     elseif v == "ip" then
       ip(t[i+1])
     end
