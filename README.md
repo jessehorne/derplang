@@ -11,7 +11,7 @@ Note: A script is all on one line. Yes sir it does make a difference!
 
 This language is being developed by Jesse Horne himself. He has no idea why he is, and
 may give up on it if he doesn't get enough positive feedback. So either email at
-j.horne2796 AT gmail DOT com or donate buy him a drink or two by donating to his paypal
+j.horne2796 AT gmail DOT com or buy him a drink or two by donating to his paypal
 which is also that same email. 
 
 A tutorial on derplang is coming soon. Until then, hack away, read the code, or
