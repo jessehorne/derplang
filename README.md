@@ -1,7 +1,6 @@
 derplang ( by Jesse Horne )
 ===========================
-derplang is an interpreted computer scripting language used for basic string and number 
-manipulation.
+derplang is an esoteric programming language.
 
 To run a derp script, put derplang.lua into the file where your derp script is, go into
 terminal, and type "lua derplang.lua filename.derp"
