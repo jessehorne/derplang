@@ -3,9 +3,6 @@ derplang ( by Jesse Horne )
 derplang is an interpreted computer scripting language used for basic string and number 
 manipulation.
 
-All data is assigned to a "Wall", the "Wall" is put on a Table, which will output in
-numerical order.
-
 To run a derp script, put derplang.lua into the file where your derp script is, go into
 terminal, and type "lua derplang.lua filename.derp"
 

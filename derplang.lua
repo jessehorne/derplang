@@ -19,25 +19,23 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ]]--
-
-function string:split(sep)
+require("lib.std")
+function string:split(sep) -- string split function
   local sep, fields = sep or " ", {}
   local pattern = string.format("([^%s]+)", sep)
   self:gsub(pattern, function(c) fields[#fields+1] = c end)
   return fields
 end
-file = assert(io.open(arg[1]), "[DERP]: You derped loading your file.")
-file_txt = file:read("*all")
-file:close()
-t = file_txt:split(":")
-global_error = false
-local t_length = 0
-for i,v in ipairs(t) do
+file = assert(io.open(arg[1]), "[DERP]: You derped loading your file.") -- loads file
+file_txt = file:read("*all") -- creates a string containing the derp script
+file:close() -- closes file
+t = file_txt:split(":") -- Splits string into table
+global_error = false -- global for determining if an error interupts the loop
+local t_length = 0 -- Declares script length as 0
+for i,v in ipairs(t) do -- Declares script length
   t_length = i
 end
-t_length = t_length - 1
-tables = {}
-walls = {}
+t_length = t_length - 1 -- Must do
 while global_error == false do
   if t[1] ~= "START" then
     global_error = true
@@ -47,17 +45,30 @@ while global_error == false do
     print("[DERP]: DONE not found at the end of script.")
   end
   for i,v in ipairs(t) do
-    if v == "w" then -- IF WALL IS CREATED
-      walls[t[i+1]] = {}
-     elseif v == "s" then -- IF DATA IS ABOUT TO BE PUT ON A WALL
-      table.insert(walls[t[i+1]], t[i+2])
-     elseif v == "p" then -- IF A WALL IS ABOUT TO BE PUT ON A TABLE
-      ft = table.concat(walls[t[i+1]], " ")
-      table.insert(tables, ft)
+    if v == "nu" then
+      nu(t[i+1], tonumber(t[i+2]))
+    elseif v == "st" then
+      st(t[i+1], tonumber(t[i+2]))
+    elseif v == "ou" then
+      ou(t[i+1])
+    elseif v == "co" then
+      co(t[i+1], t[i+2], t[i+3])
+    elseif v == "ad" then
+      ad(t[i+1], t[i+2], t[i+3])
+    elseif v == "su" then
+      su(t[i+1], t[i+2], t[i+3])
+    elseif v == "mu" then
+      mu(t[i+1], t[i+2], t[i+3])
+    elseif v == "di" then
+      di(t[i+1], t[i+2], t[i+3])
+    elseif v == "fo" then
+      fo(t[i+1], t[i+2], t[i+3], t[i+4])
+    elseif v == "ip" then
+      ip(t[i+1])
     end
   end
-  global_error = true
+
+  global_error = true -- END PROGRAM
+
 end
-for i,v in ipairs(tables) do
-  print(v)
-end
+
