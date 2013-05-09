@@ -63,6 +63,16 @@ while global_error == false do
       going_to = true
       start_place = tonumber(t[i+1])
       break
+    elseif t[i] == "it" then
+      if _G[t[i+1]] == _G[t[i+2]] then
+        going_to = true
+        start_place = tonumber(t[i+3])
+        break
+      else
+        going_to = true
+        start_place = tonumber(t[i+4])
+        break
+      end
     end
     going_to = false
   end

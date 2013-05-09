@@ -69,3 +69,4 @@ end
 function ip(x) -- input
   _G[x] = io.read()
 end
+
