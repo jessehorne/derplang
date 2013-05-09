@@ -42,7 +42,7 @@ while global_error == false do
     if t[i] == "nu" then
       nu(t[i+1], tonumber(t[i+2]))
     elseif t[i] == "st" then
-      st(t[i+1], tonumber(t[i+2]))
+      st(t[i+1], t[i+2])
     elseif t[i] == "ou" then
       ou(t[i+1])
     elseif t[i] == "co" then
