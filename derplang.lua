@@ -36,39 +36,38 @@ for i,v in ipairs(t) do -- Declares script length
   t_length = i
 end
 t_length = t_length - 1 -- Must do
+start_place = 1
 while global_error == false do
-  if t[1] ~= "START" then
-    global_error = true
-    print("[DERP]: START not found at beginning of script.")
-  elseif t[t_length] ~= "DONE" then
-    global_error = true
-    print("[DERP]: DONE not found at the end of script.")
-  end
-  for i,v in ipairs(t) do
-    if v == "nu" then
+  for i=start_place, t_length do
+    if t[i] == "nu" then
       nu(t[i+1], tonumber(t[i+2]))
-    elseif v == "st" then
+    elseif t[i] == "st" then
       st(t[i+1], tonumber(t[i+2]))
-    elseif v == "ou" then
+    elseif t[i] == "ou" then
       ou(t[i+1])
-    elseif v == "co" then
+    elseif t[i] == "co" then
       co(t[i+1], t[i+2], t[i+3])
-    elseif v == "ad" then
+    elseif t[i] == "ad" then
       ad(t[i+1], t[i+2], t[i+3])
-    elseif v == "su" then
+    elseif t[i] == "su" then
       su(t[i+1], t[i+2], t[i+3])
-    elseif v == "mu" then
+    elseif t[i] == "mu" then
       mu(t[i+1], t[i+2], t[i+3])
-    elseif v == "di" then
+    elseif t[i] == "di" then
       di(t[i+1], t[i+2], t[i+3])
-    elseif v == "fo" then
-      fo(t[i+1], t[i+2], t[i+3])
-    elseif v == "ip" then
+    elseif t[i] == "fo" then
+      fo(t[i+1], t[i+2], t[i+3], t[i+4], t[i+5])
+    elseif t[i] == "ip" then
       ip(t[i+1])
+    elseif t[i] == "gt" then
+      going_to = true
+      start_place = tonumber(t[i+1])
+      break
     end
+    going_to = false
   end
-
-  global_error = true -- END PROGRAM
+  
+  if going_to == false then global_error = true end
 
 end
 

@@ -61,7 +61,7 @@ function di(z, x, y) -- division
 end
 
 function fo(x, cmd, var) -- for loop
-  for i=1, x do
+  for i=1, x-1 do
     _G[cmd](var)
   end
 end
