@@ -60,9 +60,9 @@ function di(z, x, y) -- division
   _G[z] = _G[x] / _G[y]
 end
 
-function fo(x, cmd, var) -- for loop
+function fo(x, cmd, var, var2, var3) -- for loop
   for i=1, x-1 do
-    _G[cmd](var)
+    _G[cmd](var, var2, var3)
   end
 end
 
