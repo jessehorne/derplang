@@ -1,0 +1,5 @@
+change gt to go && add labels instead of exact number labels
+replace nu and st with va
+varadic math
+better conditional handling
+random numbers (ra:x:1:10:)
