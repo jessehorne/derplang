@@ -22,46 +22,38 @@ t_length = t_length - 1 -- Must do
 start_place = 1
 while global_error == false do
   for i=start_place, t_length do
-    if t[i] == "nu" then
-      nu(t[i+1], tonumber(t[i+2]))
-    elseif t[i] == "st" then
-      st(t[i+1], t[i+2])
-    elseif t[i] == "ou" then
+    if t[i] == "va" then -- VARIABLE DECLARATION
+      va(t[i+1], t[i+2])
+    elseif t[i] == "ou" then -- OUTPUT
       ou(t[i+1])
-    elseif t[i] == "co" then
+    elseif t[i] == "co" then -- CONCATENATE
       co(t[i+1], t[i+2], t[i+3])
-    elseif t[i] == "ad" then
+    elseif t[i] == "ad" then -- ADD
       ad(t[i+1], t[i+2], t[i+3])
-    elseif t[i] == "su" then
+    elseif t[i] == "su" then -- SUBTRACT
       su(t[i+1], t[i+2], t[i+3])
-    elseif t[i] == "mu" then
+    elseif t[i] == "mu" then -- MULTIPLY
       mu(t[i+1], t[i+2], t[i+3])
-    elseif t[i] == "di" then
+    elseif t[i] == "di" then -- DIVIDE
       di(t[i+1], t[i+2], t[i+3])
-    elseif t[i] == "fo" then
+    elseif t[i] == "fo" then -- FO LOOP
       fo(t[i+1], t[i+2], t[i+3], t[i+4], t[i+5])
-    elseif t[i] == "ip" then
+    elseif t[i] == "ip" then -- INPUT
       ip(t[i+1])
-    elseif t[i] == "gt" then
-      going_to = true
-      start_place = tonumber(t[i+1])
+    elseif t[i] == "la" then -- LABEL
+      _G[t[i+1]] = i
+    elseif t[i] == "go" then -- GO
+      go(t[i+1])
       break
-    elseif t[i] == "it" then
-      if _G[t[i+1]] == nil then
-        if tonumber(t[i+1]) ~= nil then _G[t[i+1]] = tonumber(t[i+1]) end
-      end
-      if _G[t[i+2]] == nil then
-        if tonumber(t[i+2]) ~= nil then _G[t[i+2]] = tonumber(t[i+2]) end
-      end
-      if _G[t[i+1]] == _G[t[i+2]] then
-        going_to = true
-        start_place = tonumber(t[i+3])
-        break
-      else
-        going_to = true
-        start_place = tonumber(t[i+4])
-        break
-      end
+    elseif t[i] == "eq" then -- IF EQUAL
+      con_check(t[i+1], t[i+2], t[i+3], t[i+4], "=")
+      break
+    elseif t[i] == "gt" then -- IF GREATER THAN
+      con_check(t[i+1], t[i+2], t[i+3], t[i+4], ">")
+    elseif t[i] == "lt" then -- IF LESS THAN
+      con_check(t[i+1], t[i+2], t[i+3], t[i+4], "<")
+    elseif t[i] == "ra" then -- RANDOM
+      ra(t[i+1], t[i+2], t[i+3])
     end
     going_to = false
   end

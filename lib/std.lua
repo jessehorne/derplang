@@ -1,9 +1,9 @@
-function nu(x, y) -- Number Declaration 
-  _G[x] = y
-end
-
-function st(x, y) -- String Declaration
-  _G[x] = y
+function va(x,y) -- variable declaration
+  if tonumber(y) ~= nil then
+    _G[x] = tonumber(y)
+  else
+    _G[x] = y
+  end
 end
 
 function ou(x) -- prints x
@@ -68,5 +68,47 @@ end
 
 function ip(x) -- input
   _G[x] = io.read()
+end
+
+function go(x) -- GO
+  going_to = true
+  if tonumber(x) ~= nil then
+    start_place = tonumber(x)
+  else
+    if _G[x] ~= nil then
+      start_place = _G[x]
+    else
+      global_error = true
+    end
+  end
+end
+
+function con_check(x, y, j, k, sign)
+  if tonumber(x) ~= nil then _G[x] = tonumber(x) end
+  if tonumber(y) ~= nil then _G[y] = tonumber(y) end
+  if sign == "=" then 
+    if _G[x] == _G[y] then
+      go(j)
+    else
+      go(k)
+    end
+  elseif sign == "<" then
+    if _G[x] < _G[y] then
+      go(j)
+    else
+      go(k)
+    end
+  elseif sign == ">" then
+    if _G[x] > _G[y] then
+      go(j)
+    else
+      go(k)
+    end
+  end
+end
+
+function ra(x, y, z) -- Random Number
+  print(x, y, z)
+  _G[x] = math.random(y, z)
 end
 
