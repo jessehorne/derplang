@@ -61,4 +61,3 @@ while global_error == false do
   if going_to == false then global_error = true end
 
 end
-
