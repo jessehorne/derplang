@@ -1,25 +1,40 @@
-require("lib.std")
-function string:split(sep) -- string split function
+require("lib.std") -- Standard Library functions for Derplang
+
+-- split is used for splitting a string by a separator
+function string:split(sep)
   local sep, fields = sep or " ", {}
   local pattern = string.format("([^%s]+)", sep)
   self:gsub(pattern, function(c) fields[#fields+1] = c end)
   return fields
 end
+
+-- trim replaces the newline characters with ""
 function trim(s)
   return (s:gsub("\n", ""))
 end
+
 file = assert(io.open(arg[1]), "[DERP]: You derped loading your file.") -- loads file
+
 file_txt = file:read("*all") -- creates a string containing the derp script
-file:close() -- closes file
+
+file:close() -- closes file object
+
 t = file_txt:split(":") -- Splits string into table
+
 global_error = false -- global for determining if an error interupts the loop
+
 local t_length = 0 -- Declares script length as 0
+
 for i,v in ipairs(t) do -- Declares script length
   t[i] = trim(t[i])
   t_length = i
 end
-t_length = t_length - 1 -- Must do
+
+t_length = t_length - 1 -- Must do :)
+
 start_place = 1
+
+-- Main loop, that cycles through the code-string, and does things
 while global_error == false do
   for i=start_place, t_length do
     if t[i] == "va" then -- VARIABLE DECLARATION
