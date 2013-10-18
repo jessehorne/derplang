@@ -1,3 +1,5 @@
+## ruby interpreter created by Iso, Jesse doesn't maintain this.
+
 class Derp
   def initialize src
     @src = src.strip.split(':').map &:strip
