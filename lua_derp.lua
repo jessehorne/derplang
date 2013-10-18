@@ -59,7 +59,7 @@ while global_error == false do
       mu(t[i+1], t[i+2], t[i+3])
     elseif t[i] == "di" then -- DIVIDE
       di(t[i+1], t[i+2], t[i+3])
-    elseif t[i] == "fo" then -- FO LOOP
+    elseif t[i] == "fo" then -- FOR LOOP
       fo(t[i+1], t[i+2], t[i+3], t[i+4], t[i+5])
     elseif t[i] == "ip" then -- INPUT
       ip(t[i+1])
