@@ -1,6 +1,6 @@
 derplang
 ===========================
-Derplang is a programming language designed by [jessehorne.github.io](Jesse Horne)
+Derplang is a programming language designed by [Jesse Horne](jessehorne.github.io)
 
 Documentation for the interpreter written in Lua
 ------------------------------------------------
