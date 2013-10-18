@@ -1,3 +1,11 @@
+--[[
+    lua_derp is the main file, that handles the code
+    Creator: Jesse Horne (jessehorne.github.io)
+    More documentation can be found http://esolangs.org/wiki/derplang
+    GitHub: github.com/jessehorne/derplang
+]]--
+
+
 require("lib.std") -- Standard Library functions for Derplang
 
 -- split is used for splitting a string by a separator
