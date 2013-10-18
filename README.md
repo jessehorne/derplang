@@ -2,7 +2,8 @@ derplang
 ===========================
 Derplang is a programming language designed by [jessehorne.github.io](Jesse Horne)
 
-! Documentation for the interpreter written in Lua
+Documentation for the interpreter written in Lua
+------------------------------------------------
 
 Each 'function', string, new line, or or variable must be split using a colon(:).
 Derplang can be compared to languages like Scheme. You have your procedures, which
@@ -31,19 +32,20 @@ lt - If Less than			(lt:x:y:a:b:) If x < y goto a, if not, goto b
 ra - Set random value		(ra:x:y:z:) Set x to random value between y and z
 ```
 
-! Examples
+Examples
+----------
 
-!! Hello World
+### Hello World
 ```
 ou:Hello World:
 ```
 
-!! What's your name?
+### What's your name?
 ```
 ou:What's your name?:ip:x:ou:x:
 ```
 
-!! 99 Bottles
+### 99 Bottles
 ```
 va:x:100:la:start:su:x:x:1:ou:x:ou:bottles of beer!:eq:x:0:END:start:
 ```
