@@ -22,19 +22,25 @@ ad - Addition				(ad:x:y:z:)
 su - Subtraction			(su:x:y:z:)
 mu - Multiplication			(mu:x:y:z:)
 di - Division				(di:x:y:z:)
-fo - For loop				(fo:i:cmd:x:y:z:) The for loop is special, it does 
-											  'cmd' 'i' times and can take up 
-											  to three arguments.
+fo - For loop				(fo:i:cmd:x:y:z:) 
+	The for loop is special, it does 
+	'cmd' 'i' times and can take up 
+	to three arguments.
 
-ip - Input 					(ip:x:) Puts input, into x similar to Lua's 
-									io.read()
-									
+ip - Input 					(ip:x:) 
+	Puts input, into x similar to Lua's 
+	io.read()
+
 la - Label 					(la:x:) Can be hopped to with 'go'
 go - Goto a label 			(go:x:) Goto x (which is a label)
-eq - If Equal				(eq:x:y:a:b:) If x == y goto a, if not, goto b
-gt - If Greater than		(gt:x:y:a:b:) If x > y goto a, if not, goto b
-lt - If Less than			(lt:x:y:a:b:) If x < y goto a, if not, goto b
-ra - Set random value		(ra:x:y:z:) Set x to random value between y and z
+eq - If Equal				(eq:x:y:a:b:) 
+	If x == y goto a, if not, goto b
+gt - If Greater than		(gt:x:y:a:b:) 
+	If x > y goto a, if not, goto b
+lt - If Less than			(lt:x:y:a:b:) 
+	If x < y goto a, if not, goto b
+ra - Set random value		(ra:x:y:z:) 
+	Set x to random value between y and z
 ```
 
 Examples
