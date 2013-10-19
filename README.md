@@ -1,6 +1,7 @@
 derplang
 ===========================
-Derplang is a programming language designed by [Jesse Horne](jessehorne.github.io)
+
+Derplang is a simple interpreted language, functional, with similarities to languages in the LISP family.
 
 Documentation for the interpreter written in Lua
 ------------------------------------------------
