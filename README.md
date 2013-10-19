@@ -1,7 +1,7 @@
 derplang
 ===========================
 
-Derplang is a simple interpreted language, functional, with similarities to languages in the LISP family.
+Derplang is a interpreted language, functional, with similarities to languages in the LISP family. The interpreter is simple and may be useful as a model for other programs of a similar nature.
 
 Documentation for the interpreter written in Lua
 ------------------------------------------------
