@@ -43,6 +43,12 @@ ra - Set random value		(ra:x:y:z:)
 	Set x to random value between y and z
 ```
 
+Running
+-------
+```
+lua lua_derp.lua examples/what.derp
+```
+
 Examples
 ----------
 
