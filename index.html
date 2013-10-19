@@ -1,0 +1,128 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Derplang</title>
+  <meta name="description" content="derplang, an esoteric programming language.">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Derplang</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">derplang, an esoteric programming language.</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/jessehorne/derplang/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/jessehorne/derplang/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/jessehorne/derplang" class="code">View Derplang on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>
+<a name="derplang" class="anchor" href="#derplang"><span class="octicon octicon-link"></span></a>derplang</h1>
+
+<p>Derplang is a interpreted language, functional, with similarities to languages in the LISP family. The interpreter is simple and may be useful as a model for other programs of a similar nature.</p>
+
+<h2>
+<a name="documentation-for-the-interpreter-written-in-lua" class="anchor" href="#documentation-for-the-interpreter-written-in-lua"><span class="octicon octicon-link"></span></a>Documentation for the interpreter written in Lua</h2>
+
+<p>Each 'function', string, new line, or or variable must be split using a colon(:).
+Derplang can be compared to languages like Scheme. You have your procedures, which
+take 'arguments'. ''procedure:arg:arg:arg''</p>
+
+<p>You may see procedures that take three arguments. This means that the first
+argument is the variable being set, and the others are being used by the procedure.</p>
+
+<p>The implemented procedures are...</p>
+
+<pre><code>va - Variable declaration   (va:x:1:)
+ou - Output, like Print     (ou:x:)
+co - Concatenate strings    (co:x:y:z:)
+ad - Addition               (ad:x:y:z:)
+su - Subtraction            (su:x:y:z:)
+mu - Multiplication         (mu:x:y:z:)
+di - Division               (di:x:y:z:)
+fo - For loop               (fo:i:cmd:x:y:z:) 
+    The for loop is special, it does 
+    'cmd' 'i' times and can take up 
+    to three arguments.
+
+ip - Input                  (ip:x:) 
+    Puts input, into x similar to Lua's 
+    io.read()
+
+la - Label                  (la:x:) Can be hopped to with 'go'
+go - Goto a label           (go:x:) Goto x (which is a label)
+eq - If Equal               (eq:x:y:a:b:) 
+    If x == y goto a, if not, goto b
+gt - If Greater than        (gt:x:y:a:b:) 
+    If x &gt; y goto a, if not, goto b
+lt - If Less than           (lt:x:y:a:b:) 
+    If x &lt; y goto a, if not, goto b
+ra - Set random value       (ra:x:y:z:) 
+    Set x to random value between y and z
+</code></pre>
+
+<h2>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<h3>
+<a name="hello-world" class="anchor" href="#hello-world"><span class="octicon octicon-link"></span></a>Hello World</h3>
+
+<pre><code>ou:Hello World:
+</code></pre>
+
+<h3>
+<a name="whats-your-name" class="anchor" href="#whats-your-name"><span class="octicon octicon-link"></span></a>What's your name?</h3>
+
+<pre><code>ou:What's your name?:ip:x:ou:x:
+</code></pre>
+
+<h3>
+<a name="99-bottles" class="anchor" href="#99-bottles"><span class="octicon octicon-link"></span></a>99 Bottles</h3>
+
+<pre><code>va:x:100:la:start:su:x:x:1:ou:x:ou:bottles of beer!:eq:x:0:END:start:
+</code></pre>
+
+<p><a href="http://esolangs.org/wiki/Derplang">http://esolangs.org/wiki/Derplang</a></p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/jessehorne" class="avatar"><img src="https://2.gravatar.com/avatar/eb70a12808b97a7b94ab1d5215053426?d=https%3A%2F%2Fidenticons.github.com%2F9ed009a7b4b4dff89b9f6ef4f1605ff5.png&amp;s=30" width="48" height="48"/></a> <a href="https://github.com/jessehorne">jessehorne</a> maintains <a href="https://github.com/jessehorne/derplang">Derplang</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/jessehorne/derplang/tarball/master" class="tar">tar</a><a href="https://github.com/jessehorne/derplang/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
