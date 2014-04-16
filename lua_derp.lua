@@ -1,5 +1,5 @@
 --[[
-    lua_derp is the main file, that handles the code
+    lua_derp is the main file
     Creator: Jesse Horne (jessehorne.github.io)
     More documentation can be found http://esolangs.org/wiki/derplang
     GitHub: github.com/jessehorne/derplang
