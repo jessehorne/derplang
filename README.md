@@ -1,14 +1,14 @@
 derplang
 ===========================
 
-Derplang is a interpreted language, functional, with similarities to languages in the LISP family. The interpreter is simple and may be useful as a model for other programs of a similar nature.
+Derplang is the product of an all-nighter, lots of caffiene, and a dream. That's how lots of projects begin.
+
+Derplang is a programming language, that was used to begin my descent into the deep dark world of programming language implementation.
 
 Documentation for the interpreter written in Lua
 ------------------------------------------------
 
-Each 'function', string, new line, or or variable must be split using a colon(:).
-Derplang can be compared to languages like Scheme. You have your procedures, which
-take 'arguments'. ''procedure:arg:arg:arg''
+Each 'function', string, new line, or or variable must be split using a colon(:). You have your procedures, which take 'arguments'. ''procedure:arg:arg:arg''
 
 You may see procedures that take three arguments. This means that the first
 argument is the variable being set, and the others are being used by the procedure.
